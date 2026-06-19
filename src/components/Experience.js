@@ -27,7 +27,7 @@ const Experience = () => {
                                 </div>
                                 <h3 className="role-title">{exp.role}</h3>
                                 <span className="company-name">{exp.company}</span>
-                                <ul className="responsibilities" role="list">
+                                <ul className="responsibilities">
                                     {exp.responsibilities.map((r, i) => (
                                         <li key={i}>{r}</li>
                                     ))}

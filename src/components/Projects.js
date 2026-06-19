@@ -169,7 +169,7 @@ const ProjectCard = ({ project, featured, onDetails }) => (
             )}
 
             {/* Highlights — show first 3 */}
-            <ul className="project-highlights" role="list">
+            <ul className="project-highlights">
                 {project.highlights.slice(0, featured ? 4 : 3).map((item, i) => (
                     <li key={i}>{item}</li>
                 ))}
@@ -214,7 +214,6 @@ const Projects = () => {
     const [activeProject, setActiveProject] = useState(null);
     const isSingle = projects.length === 1;
     const featured = projects.find(p => p.featured) ?? projects[0];
-    const secondary = projects.filter(p => p.id !== featured.id);
 
     return (
         <>

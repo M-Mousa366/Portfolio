@@ -105,7 +105,7 @@ const Education = () => {
                                             <BookIcon />
                                             Relevant Coursework
                                         </h4>
-                                        <ul className="edu-focus-list" role="list">
+                                        <ul className="edu-focus-list">
                                             {edu.focus.map((item, i) => (
                                                 <li key={i} className="edu-focus-tag">{item}</li>
                                             ))}

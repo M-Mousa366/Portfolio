@@ -96,7 +96,7 @@ function App() {
                     </a>
 
                     <div className="nav-right">
-                        <ul className="nav-links" id="mobile-nav" role="list">
+                        <ul className="nav-links" id="mobile-nav">
                             {navLinks.map((link) => (
                                 <li key={link.id}>
                                     <a

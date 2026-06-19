@@ -43,7 +43,7 @@ const Skills = () => {
                                     </span>
                                     {category.title}
                                 </h3>
-                                <ul className="skill-list" role="list">
+                                <ul className="skill-list">
                                     {category.skills.map((skill, j) => (
                                         <li key={j}>
                                             <SkillTag skill={skill} />
