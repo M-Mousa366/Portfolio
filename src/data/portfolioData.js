@@ -123,13 +123,6 @@ export const personalInfo = {
         'Cybersecurity Engineer with a robust background in IT operations and advanced networking, specializing in SOC-driven log analysis and threat detection.',
     resumePath: '/Mohamed_Mousa CV.pdf',
     about: {
-        paragraphs: [
-            "I am a Computer Science & IT graduate with a deep passion for securing digital ecosystems and architecting resilient network foundations. My technical journey bridges the gap between proactive system administration and defensive cybersecurity.",
-
-            "Through academic projects and hands-on labs, I have focused heavily on mastering SOC operations, SIEM deployment, and robust infrastructure monitoring. I leverage my understanding of TCP/IP, routing, and system environments to analyze infrastructure behavior and investigate how threats move through a network.",
-
-            "Beyond engineering, my experience mentoring tech students has honed my communication, collaboration, and quick problem-solving skills under dynamic environments. I am eager to bring this blend of infrastructure knowledge and threat-hunting mindset to a forward-thinking security team."
-        ],
         highlights: [
             { label: 'Focus Area', value: 'SOC / Cybersecurity' },
             { label: 'Networking', value: 'CCNA Certified' },
@@ -248,7 +241,11 @@ export const certifications = [
         logo: 'certiport',
         date: 'Sep 2024',
         skills: ['Device Configuration', 'IT Infrastructure', 'Systems Management'],
-        credentialFile: '/Certificates/it-specialist-credential.html',
+        credentialFile: '/Certificates/Device Configuration and Management.pdf',
+        credentialFiles: [
+            { label: 'Certificate', path: '/Certificates/Device Configuration and Management.pdf' },
+            { label: 'Report', path: '/Certificates/Device Configuration and Management.pdf.pdf' },
+        ],
         credentialUrl: null,
     },
     {

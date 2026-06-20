@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { projects } from '../data/portfolioData';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { GitHubIcon } from './Icons';
@@ -25,6 +25,12 @@ const CloseIcon = () => (
 
 /* ── Project Detail Modal ─────────────────────────────────── */
 const ProjectModal = ({ project, onClose }) => {
+    useEffect(() => {
+        const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+        document.addEventListener('keydown', onKey);
+        return () => document.removeEventListener('keydown', onKey);
+    }, [onClose]);
+
     if (!project) return null;
 
     return (
@@ -138,7 +144,7 @@ const ProjectModal = ({ project, onClose }) => {
 };
 
 /* ── Project Card ─────────────────────────────────────────── */
-const ProjectCard = ({ project, featured, onDetails }) => (
+const ProjectCard = memo(({ project, featured, onDetails }) => (
     <article
         className={`project-card animate-on-scroll ${featured ? 'project-card-featured' : ''}`}
         aria-label={`${project.title} project`}
@@ -177,7 +183,7 @@ const ProjectCard = ({ project, featured, onDetails }) => (
         </div>
 
         <div className="project-card-footer">
-            <div className="tech-tags" role="list" aria-label="Technologies used">
+            <div className="tech-tags" aria-label="Technologies used">
                 {project.techTags.map((tag, i) => (
                     <SkillTag key={i} skill={tag} />
                 ))}
@@ -206,7 +212,7 @@ const ProjectCard = ({ project, featured, onDetails }) => (
             </div>
         </div>
     </article>
-);
+));
 
 /* ── Section ──────────────────────────────────────────────── */
 const Projects = () => {
