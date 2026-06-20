@@ -2228,11 +2228,51 @@ button:focus-visible {
 
 @media (max-width: 640px) {
     .project-card-featured {
-        padding: var(--sp-7);
+        padding: var(--sp-6);
     }
 
     .project-card-featured .project-title {
         font-size: var(--text-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        padding: var(--sp-5);
+        gap: var(--sp-4);
+    }
+
+    .project-card-featured {
+        padding: var(--sp-5);
+    }
+
+    .project-card-featured .project-title {
+        font-size: var(--text-lg);
+    }
+
+    .project-card-featured .project-description {
+        max-width: 100%;
+    }
+
+    .project-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-3);
+    }
+
+    .project-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .card-header {
+        align-items: flex-start;
+        gap: var(--sp-2);
+    }
+
+    .tech-tags,
+    .project-skill-row {
+        width: 100%;
     }
 }
 
